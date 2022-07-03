@@ -18,3 +18,8 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+
+###> etc ###
+.php-cs-fixer.cache
+tryit.php
+###< etc ###
