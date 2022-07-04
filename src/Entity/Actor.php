@@ -13,11 +13,12 @@ class Actor
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private $id;
+    private int $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $name;
+    private string $name;
 
+    /** @var ArrayCollection<int, Movie> */
     #[ORM\ManyToMany(targetEntity: Movie::class, mappedBy: 'actors')]
     private $movies;
 
@@ -28,10 +29,10 @@ class Actor
 
     public function __toString(): string
     {
-        return (string) $this->name;
+        return $this->name;
     }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }

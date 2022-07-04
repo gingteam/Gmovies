@@ -13,27 +13,27 @@ class Movie
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
-    private $id;
+    private int $id;
 
     #[ORM\ManyToOne(targetEntity: Director::class, inversedBy: 'movies')]
-    private $director;
+    private ?Director $director;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $name;
+    private string $name;
 
-    /** @var ArrayCollection<Genre> */
+    /** @var ArrayCollection<int, Genre> */
     #[ORM\ManyToMany(targetEntity: Genre::class, inversedBy: 'movies')]
     private $genres;
 
-    /** @var ArrayCollection<Actor> */
+    /** @var ArrayCollection<int, Actor> */
     #[ORM\ManyToMany(targetEntity: Actor::class, inversedBy: 'movies')]
     private $actors;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $poster;
+    private ?string $poster;
 
     #[ORM\Column(type: 'string', length: 255, nullable: true)]
-    private $description;
+    private ?string $description;
 
     public function __construct()
     {
@@ -43,10 +43,10 @@ class Movie
 
     public function __toString(): string
     {
-        return (string) $this->id;
+        return $this->name;
     }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
