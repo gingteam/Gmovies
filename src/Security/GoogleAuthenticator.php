@@ -41,7 +41,8 @@ class GoogleAuthenticator extends OAuth2Authenticator
     {
         $client = $this->client->getClient('google');
 
-        $googleUser = $client->fetchUser();
+        $accessToken = $client->getAccessToken();
+        $googleUser = $client->fetchUserFromToken($accessToken);
         $request->getSession()->set(Security::LAST_USERNAME, $googleUser->getId());
 
         return new SelfValidatingPassport(
