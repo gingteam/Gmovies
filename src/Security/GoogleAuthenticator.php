@@ -37,7 +37,7 @@ class GoogleAuthenticator extends OAuth2Authenticator
         return 'connect_google_check' === $request->attributes->get('_route');
     }
 
-    public function authenticate(Request $request): Passport
+    public function authenticate(Request $request): SelfValidatingPassport
     {
         $client = $this->client->getClient('google');
 
@@ -46,8 +46,10 @@ class GoogleAuthenticator extends OAuth2Authenticator
         $request->getSession()->set(Security::LAST_USERNAME, $googleUser->getId());
 
         return new SelfValidatingPassport(
-            new UserBadge($googleUser->getId(), function () use ($googleUser) {
-                $existingUser = $this->entityManager->getRepository(User::class)->findOneBy(['googleId' => (string) $googleUser->getId()]);
+            new UserBadge((string) $googleUser->getId(), function () use ($googleUser) {
+                $existingUser = $this->entityManager->getRepository(User::class)->findOneBy([
+                    'googleId' => (string) $googleUser->getId(),
+                ]);
 
                 if ($existingUser) {
                     return $existingUser;
@@ -58,7 +60,7 @@ class GoogleAuthenticator extends OAuth2Authenticator
 
                 // Create user if it does not exist
                 $user = new User();
-                $user->setGoogleId($googleUser->getId());
+                $user->setGoogleId((string) $googleUser->getId());
                 $user->setName($data['name']);
                 $user->setPicture($data['picture']);
 
