@@ -44,15 +44,15 @@ function App() {
       {notification && <div className={`notification ${error ? 'is-danger' : 'is-success'}`}>{notification}</div>}
       <div className="box">
         <div className="field">
-          <div className="control has-icons-left">
-            <label htmlFor="input" className="label">
-              URL
+          <label htmlFor="input" className="label">
+            URL
+            <div className="control has-icons-left">
               <input id="input" className="input" type="text" value={input} onChange={(e) => setInput(e.target.value)} />
-            </label>
-            <span className="icon is-small is-left">
-              <i className="fa-solid fa-link" />
-            </span>
-          </div>
+              <span className="icon is-small is-left">
+                <i className="fa-solid fa-link" />
+              </span>
+            </div>
+          </label>
         </div>
         <div className="field">
           <div className="control">
