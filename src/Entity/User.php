@@ -4,10 +4,11 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User implements UserInterface
+class User implements UserInterface, JsonSerializable
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -112,5 +113,16 @@ class User implements UserInterface
         $this->picture = $picture;
 
         return $this;
+    }
+
+    /**
+     * @return array{name:string,picture:string}
+     */
+    public function jsonSerialize(): mixed
+    {
+        return [
+            'name' => $this->name,
+            'picture' => $this->picture,
+        ];
     }
 }

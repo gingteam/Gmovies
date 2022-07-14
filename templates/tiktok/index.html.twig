@@ -1,7 +1,15 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Hello TikTokController!{% endblock %}
-
-{% block body %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Download video from TikTok</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="user" data-user-data="{{ app.user|json_encode }}"></div>
     <div id="root"></div>
-{% endblock %}
+    {{ encore_entry_script_tags('tiktok') }}
+  </body>
+</html>
