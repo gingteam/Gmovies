@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28479230529f09aef556ba88069882df",
+    "content-hash": "95e6306d22a1b66b488046316fb4e882",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1378,16 +1378,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.3.3",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "d68433feffe7f254aa157c67ada5e40ef33b03c0"
+                "reference": "10357b0ee790d0ba5ac8be09b650d02bafd233d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/d68433feffe7f254aa157c67ada5e40ef33b03c0",
-                "reference": "d68433feffe7f254aa157c67ada5e40ef33b03c0",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/10357b0ee790d0ba5ac8be09b650d02bafd233d4",
+                "reference": "10357b0ee790d0ba5ac8be09b650d02bafd233d4",
                 "shasum": ""
             },
             "require": {
@@ -1454,7 +1454,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.3.3"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.3.4"
             },
             "funding": [
                 {
@@ -1462,7 +1462,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-07-11T18:05:21+00:00"
+            "time": "2022-07-21T17:38:52+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -2037,6 +2037,165 @@
                 }
             ],
             "time": "2022-06-20T21:43:11+00:00"
+        },
+        {
+            "name": "knplabs/knp-components",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/knp-components.git",
+                "reference": "755b0d10902a7db5dc654e9af86a7dcb9c7c5b7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/knp-components/zipball/755b0d10902a7db5dc654e9af86a7dcb9c7c5b7d",
+                "reference": "755b0d10902a7db5dc654e9af86a7dcb9c7c5b7d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4 || ^8.0",
+                "symfony/event-dispatcher-contracts": "^2.0 || ^3.0",
+                "symfony/http-foundation": "^4.4 || ^5.4 || ^6.0"
+            },
+            "conflict": {
+                "doctrine/dbal": "<2.10"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "^2.0",
+                "doctrine/orm": "^2.7",
+                "doctrine/phpcr-odm": "^1.2",
+                "ext-pdo_sqlite": "*",
+                "jackalope/jackalope-doctrine-dbal": "^1.2",
+                "phpunit/phpunit": "^9.5",
+                "propel/propel1": "^1.7",
+                "ruflin/elastica": "^7.0",
+                "solarium/solarium": "^6.0",
+                "symfony/http-kernel": "^4.4 || ^5.4 || ^6.0",
+                "symfony/property-access": "^4.4 || ^5.4 || ^6.0"
+            },
+            "suggest": {
+                "doctrine/common": "to allow usage pagination with Doctrine ArrayCollection",
+                "doctrine/mongodb-odm": "to allow usage pagination with Doctrine ODM MongoDB",
+                "doctrine/orm": "to allow usage pagination with Doctrine ORM",
+                "doctrine/phpcr-odm": "to allow usage pagination with Doctrine ODM PHPCR",
+                "propel/propel1": "to allow usage pagination with Propel ORM",
+                "ruflin/elastica": "to allow usage pagination with ElasticSearch Client",
+                "solarium/solarium": "to allow usage pagination with Solarium Client",
+                "symfony/property-access": "To allow sorting arrays"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Component\\": "src/Knp/Component"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "https://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/knp-components/contributors"
+                }
+            ],
+            "description": "Knplabs component library",
+            "homepage": "http://github.com/KnpLabs/knp-components",
+            "keywords": [
+                "components",
+                "knp",
+                "knplabs",
+                "pager",
+                "paginator"
+            ],
+            "support": {
+                "issues": "https://github.com/KnpLabs/knp-components/issues",
+                "source": "https://github.com/KnpLabs/knp-components/tree/v3.5.0"
+            },
+            "time": "2021-12-11T12:45:19+00:00"
+        },
+        {
+            "name": "knplabs/knp-paginator-bundle",
+            "version": "v5.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpPaginatorBundle.git",
+                "reference": "216b9d5708001788321916c5b7632da9fb9ef6ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpPaginatorBundle/zipball/216b9d5708001788321916c5b7632da9fb9ef6ca",
+                "reference": "216b9d5708001788321916c5b7632da9fb9ef6ca",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-components": "^2.4 || ^3.0",
+                "php": "^7.3 || ^8.0",
+                "symfony/config": "^4.4 || ^5.3 || ^6.0",
+                "symfony/dependency-injection": "^4.4 || ^5.3 || ^6.0",
+                "symfony/event-dispatcher": "^4.4 || ^5.3 || ^6.0",
+                "symfony/http-foundation": "^4.4 || ^5.3 || ^6.0",
+                "symfony/http-kernel": "^4.4 || ^5.3 || ^6.0",
+                "symfony/routing": "^4.4 || ^5.3 || ^6.0",
+                "symfony/translation": "^4.4 || ^5.3 || ^6.0",
+                "twig/twig": "^2.0 || ^3.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.93",
+                "phpunit/phpunit": "^8.5 || ^9.5",
+                "symfony/expression-language": "^4.4 || ^5.3 || ^6.0",
+                "symfony/templating": "^4.4 || ^5.3 || ^6.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Knp\\Bundle\\PaginatorBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle/contributors"
+                }
+            ],
+            "description": "Paginator bundle for Symfony to automate pagination and simplify sorting and other features",
+            "homepage": "http://github.com/KnpLabs/KnpPaginatorBundle",
+            "keywords": [
+                "bundle",
+                "knp",
+                "knplabs",
+                "pager",
+                "pagination",
+                "paginator",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/KnpLabs/KnpPaginatorBundle/issues",
+                "source": "https://github.com/KnpLabs/KnpPaginatorBundle/tree/v5.8.0"
+            },
+            "time": "2021-10-30T08:27:46+00:00"
         },
         {
             "name": "knpuniversity/oauth2-client-bundle",
@@ -8651,16 +8810,16 @@
         },
         {
             "name": "symfony/webpack-encore-bundle",
-            "version": "v1.15.0",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/webpack-encore-bundle.git",
-                "reference": "1fc386364200ca43108ff1871d86435b840ea67c"
+                "reference": "718673b1e758533614190ae74d07305a72bc66a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/1fc386364200ca43108ff1871d86435b840ea67c",
-                "reference": "1fc386364200ca43108ff1871d86435b840ea67c",
+                "url": "https://api.github.com/repos/symfony/webpack-encore-bundle/zipball/718673b1e758533614190ae74d07305a72bc66a9",
+                "reference": "718673b1e758533614190ae74d07305a72bc66a9",
                 "shasum": ""
             },
             "require": {
@@ -8704,7 +8863,7 @@
             "description": "Integration with your Symfony app & Webpack Encore!",
             "support": {
                 "issues": "https://github.com/symfony/webpack-encore-bundle/issues",
-                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.15.0"
+                "source": "https://github.com/symfony/webpack-encore-bundle/tree/v1.15.1"
             },
             "funding": [
                 {
@@ -8720,7 +8879,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-06T13:36:43+00:00"
+            "time": "2022-07-13T17:07:35+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -8874,6 +9033,78 @@
                 }
             ],
             "time": "2022-01-04T13:58:53+00:00"
+        },
+        {
+            "name": "twig/string-extra",
+            "version": "v3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/string-extra.git",
+                "reference": "03608ae2e9c270a961e8cf1b75751e8635ad3e3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/string-extra/zipball/03608ae2e9c270a961e8cf1b75751e8635ad3e3c",
+                "reference": "03608ae2e9c270a961e8cf1b75751e8635ad3e3c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/string": "^5.0|^6.0",
+                "symfony/translation-contracts": "^1.1|^2|^3",
+                "twig/twig": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Twig\\Extra\\String\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension for Symfony String",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "html",
+                "string",
+                "twig",
+                "unicode"
+            ],
+            "support": {
+                "source": "https://github.com/twigphp/string-extra/tree/v3.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-01-02T10:02:25+00:00"
         },
         {
             "name": "twig/twig",
@@ -10590,16 +10821,16 @@
         },
         {
             "name": "psalm/plugin-symfony",
-            "version": "v3.1.7",
+            "version": "v3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/psalm/psalm-plugin-symfony.git",
-                "reference": "c10e7795f4d7935a26983a8735cb2b7e6ff814e1"
+                "reference": "85b4f17a80656553d48c9570e513360931bbb6b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/psalm/psalm-plugin-symfony/zipball/c10e7795f4d7935a26983a8735cb2b7e6ff814e1",
-                "reference": "c10e7795f4d7935a26983a8735cb2b7e6ff814e1",
+                "url": "https://api.github.com/repos/psalm/psalm-plugin-symfony/zipball/85b4f17a80656553d48c9570e513360931bbb6b2",
+                "reference": "85b4f17a80656553d48c9570e513360931bbb6b2",
                 "shasum": ""
             },
             "require": {
@@ -10649,9 +10880,9 @@
             "description": "Psalm Plugin for Symfony",
             "support": {
                 "issues": "https://github.com/psalm/psalm-plugin-symfony/issues",
-                "source": "https://github.com/psalm/psalm-plugin-symfony/tree/v3.1.7"
+                "source": "https://github.com/psalm/psalm-plugin-symfony/tree/v3.1.8"
             },
-            "time": "2022-06-14T11:07:03+00:00"
+            "time": "2022-07-17T14:00:06+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -11697,22 +11928,22 @@
         },
         {
             "name": "symfony/maker-bundle",
-            "version": "v1.43.0",
+            "version": "v1.44.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/maker-bundle.git",
-                "reference": "e3f9a1d9e0f4968f68454403e820dffc7db38a59"
+                "reference": "fa535d792e9261ae7a78481f643c00991e1d1588"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/e3f9a1d9e0f4968f68454403e820dffc7db38a59",
-                "reference": "e3f9a1d9e0f4968f68454403e820dffc7db38a59",
+                "url": "https://api.github.com/repos/symfony/maker-bundle/zipball/fa535d792e9261ae7a78481f643c00991e1d1588",
+                "reference": "fa535d792e9261ae7a78481f643c00991e1d1588",
                 "shasum": ""
             },
             "require": {
                 "doctrine/inflector": "^2.0",
                 "nikic/php-parser": "^4.11",
-                "php": ">=7.2.5",
+                "php": ">=8.0",
                 "symfony/config": "^5.4.7|^6.0",
                 "symfony/console": "^5.4.7|^6.0",
                 "symfony/dependency-injection": "^5.4.7|^6.0",
@@ -11723,7 +11954,9 @@
                 "symfony/http-kernel": "^5.4.7|^6.0"
             },
             "conflict": {
-                "doctrine/orm": "<2.10"
+                "doctrine/doctrine-bundle": "<2.4",
+                "doctrine/orm": "<2.10",
+                "symfony/doctrine-bridge": "<5.4"
             },
             "require-dev": {
                 "composer/semver": "^3.0",
@@ -11768,7 +12001,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/maker-bundle/issues",
-                "source": "https://github.com/symfony/maker-bundle/tree/v1.43.0"
+                "source": "https://github.com/symfony/maker-bundle/tree/v1.44.0"
             },
             "funding": [
                 {
@@ -11784,7 +12017,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-17T15:46:50+00:00"
+            "time": "2022-07-13T17:37:04+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",

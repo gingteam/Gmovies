@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<html data-theme="light">
+<title>{% block title %}GPorn{% endblock %}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picocss/1.5.2/pico.min.css" integrity="sha512-3gFq2IXMVlAQaUyahzhjDRivv0yqyXTb7xiy6ivTaG5Uz4hKI54uYxpQefdomgDVQ11eJVUbXG0YdPMDISiGgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+<nav class="container-fluid">
+  <ul>
+    <li><i class="fa-solid fa-terminal"></i></li>
+    <li><strong>Maam</strong></li>
+  </ul>
+  <ul>
+    <li>
+    {% if app.user %}
+      <details role="list" dir="rtl">
+        <summary aria-haspopup="listbox" role="link"><i class="fa-solid fa-user"></i></summary>
+        <ul role="listbox">
+          <li><a href="{{ path('app_logout') }}">Logout <i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+      </details>
+    {% else %}
+      <a href="{{ path('connect_google_start') }}" role="button">Login</a>
+    {% endif %}
+    </li>
+  </ul>
+</nav>
+<main class="container">
+  {% block body %}{% endblock %}
+</div>
+<footer class="container-fluid">
+  <small>Built with <a href="https://symfony.com" class="secondary">Symfony</a> • Ging</small>
+</footer>
+</body>
 </html>

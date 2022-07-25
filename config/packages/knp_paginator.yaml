@@ -1,0 +1,6 @@
+knp_paginator:
+    default_options:
+        default_limit: 6
+    template:
+        pagination: '@KnpPaginator/Pagination/bulma_pagination.html.twig'
+    page_range: 5

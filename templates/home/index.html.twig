@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div class="columns is-desktop is-multiline">
+    {% for movie in pagination %}
+      <div class="column is-half">
+        {% include '@components/movie_card.html.twig' with {'movie': movie} %}
+      </div>
+    {% endfor %}
+  </div>
+  {{ knp_pagination_render(pagination) }}
+{% endblock %}

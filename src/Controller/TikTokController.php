@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,12 +13,10 @@ use TikTok\TikTokDownloader;
 
 class TikTokController extends AbstractController
 {
+    #[Template]
     #[Route('/tiktok', name: 'app_tiktok')]
-    public function index(): Response
+    public function index(): void
     {
-        return $this->render('tiktok/index.html.twig', [
-            'controller_name' => 'TikTokController',
-        ]);
     }
 
     #[Route('/api/tiktok', name: 'app_tiktok_api', methods: ['POST'])]

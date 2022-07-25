@@ -13,6 +13,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\Security;
+use Symfony\Component\Security\Http\Authenticator\Passport\Badge\RememberMeBadge;
 use Symfony\Component\Security\Http\Authenticator\Passport\Badge\UserBadge;
 use Symfony\Component\Security\Http\Authenticator\Passport\SelfValidatingPassport;
 
@@ -67,7 +68,9 @@ class GoogleAuthenticator extends OAuth2Authenticator
                 $this->entityManager->flush();
 
                 return $user;
-            })
+            }), [
+                new RememberMeBadge(),
+            ]
         );
     }
 
@@ -76,7 +79,7 @@ class GoogleAuthenticator extends OAuth2Authenticator
         // For example:
         // return new RedirectResponse($this->urlGenerator->generate('some_route'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
-        return new RedirectResponse($this->urlGenerator->generate('admin'));
+        return new RedirectResponse($this->urlGenerator->generate('app_home'));
     }
 
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception): ?Response

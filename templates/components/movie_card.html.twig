@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-128x128">
+          <img src="{{ movie.poster }}" alt="{{ movie.name }}" referrerpolicy="no-referrer">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{ movie.name }}</p>
+        <p class="subtitle is-6">{{ movie.description|u.truncate(120, '...') }}</p>
+      </div>
+    </div>
+  </div>
+</div>

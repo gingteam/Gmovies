@@ -12,7 +12,7 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{js,jsx}]
+[*.{js,jsx,twig}]
 indent_size = 2
 
 [webpack.config.js]
