@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\MovieRepository;
+use Knp\Component\Pager\Pagination\PaginationInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -11,6 +12,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
+    /**
+     * @return array{pagination: PaginationInterface}
+     */
     #[Template]
     #[Route('/', name: 'app_home')]
     public function index(
